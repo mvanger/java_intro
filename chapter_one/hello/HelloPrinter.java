@@ -14,6 +14,7 @@ public class HelloPrinter // Declares the class HelloPrinter
     System.out.println("Here is an extra \" quotation mark");
     System.out.println("Here is a \n new line");
     System.out.println("Here is a \nnew line without the extra space");
+    System.out.println(.1 + .2);
   }
 }
 
