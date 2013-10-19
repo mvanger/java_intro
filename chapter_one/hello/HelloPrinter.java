@@ -15,6 +15,8 @@ public class HelloPrinter // Declares the class HelloPrinter
     System.out.println("Here is a \n new line");
     System.out.println("Here is a \nnew line without the extra space");
     System.out.println(.1 + .2);
+    String test = "Here is a string";
+    System.out.println(test.charAt(0));
   }
 }
 
