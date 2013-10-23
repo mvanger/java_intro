@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class HelloPrinter // Declares the class HelloPrinter
 {
   // main is a method
@@ -17,6 +19,16 @@ public class HelloPrinter // Declares the class HelloPrinter
     System.out.println(.1 + .2);
     String test = "Here is a string";
     System.out.println(test.charAt(0));
+    int[] test2 = new int[10];
+    System.out.println(test2.length);
+    System.out.println(test.length());
+    double[] values = {1, 2, 3};
+    double total = 0;
+    for (double something : values) {
+      total = total + something;
+    }
+    System.out.println(total);
+    System.out.println(Arrays.toString(values));
   }
 }
 
