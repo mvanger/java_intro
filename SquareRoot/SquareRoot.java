@@ -6,6 +6,7 @@
   algorithm. computeError computes the error between the estimate and the actual square root.
 */
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SquareRoot {
   public static void main(String[] args)
@@ -68,6 +69,54 @@ public class SquareRoot {
     return startingEstimate;
   }
 
+
+  /**
+    Asks the user for the relative error they want.
+    @param none
+    @return the user-specified relative error
+  */
+  public static double getRelativeError() {
+    Scanner secondIn = new Scanner(System.in);
+    System.out.println("Within what relative error?");
+    double relativeError;
+    if (!secondIn.hasNextDouble()) {
+      System.out.println("Error, starting over.");
+      relativeError = getRelativeError();
+    } else {
+      relativeError = secondIn.nextDouble();
+      if (relativeError <= 0) {
+        System.out.println("Error must be positive.");
+        relativeError = getRelativeError();
+      }
+    }
+    return relativeError;
+  }
+
+  /**
+    Asks the user what output style they want
+    @param none
+    @return the user-specified output style (1 or 2)
+  */
+  public static int getOutputStyle() {
+    Scanner thirdIn = new Scanner(System.in);
+    System.out.println("What would you like the output to look like?");
+    System.out.println("\t1) All on one line");
+    System.out.println("\t2) One at a time");
+    int outputStyle;
+    if (!thirdIn.hasNextInt()) {
+      System.out.println("Please enter 1 or 2.");
+      outputStyle = getOutputStyle();
+    } else {
+      outputStyle = thirdIn.nextInt();
+      if (outputStyle != 1 && outputStyle != 2) {
+        System.out.println("error is here");
+        System.out.println("Please enter 1 or 2.");
+        outputStyle = getOutputStyle();
+      }
+    }
+    return outputStyle;
+  }
+
   /**
     Gets user input and calls the algorithm. It recursively calls itself as long as the user inputs "y".
     @param input is whether the user wants to run the algorithm or exit the program
@@ -76,31 +125,47 @@ public class SquareRoot {
   public static void promptUser(String input) {
     if (input.equals("y")) {
       Scanner in = new Scanner(System.in);
-      System.out.println("What number would you like to take the square root of?");
-      if (!in.hasNextInt()) {
-        System.out.println("Error, starting over.");
-        promptUser("y");
-      } else {
+      System.out.println("What numbers would you like to take the square root of?");
+      System.out.println("You may enter them one at a time, or the entire sequence separated by spaces.");
+      System.out.println("Only positive integers will be recorded.");
+      System.out.println("Enter a non-numeric value to submit.");
+      // Initializes ArrayList
+      ArrayList<Integer> startingIntegers = new ArrayList<Integer>();
+      // Populates ArrayList
+      while (in.hasNextInt()) {
         int beginSquare = in.nextInt();
-        System.out.println("Within what relative error?");
-        if (!in.hasNextDouble()) {
-          System.out.println("Error, starting over.");
-          promptUser("y");
-        } else {
-          double beginError = in.nextDouble();
-          int startingEstimate = computeStartingNumber(beginSquare);
-          double[] inputArray = {startingEstimate, 0};
-          double[] test = computeBabylonianRoot(beginSquare, inputArray, beginError);
-          System.out.println("The answer is " + test[0]);
-          System.out.println("It took " + test[1] + " iterations.");
-          System.out.println("Compute another? (y/n)");
-          String newUserInput = in.next();
-          promptUser(newUserInput);
+        if (beginSquare > 0) {
+          startingIntegers.add(beginSquare);
         }
       }
+      // Gets relative error and output style from user
+      double relativeErrorInput = getRelativeError();
+      int style = getOutputStyle();
+      // Computes square root for elements in ArrayList
+      for (int square : startingIntegers) {
+        int startingEstimate = computeStartingNumber(square);
+        double[] inputArray = {startingEstimate, 0};
+        double[] test = computeBabylonianRoot(square, inputArray, relativeErrorInput);
+        if (style == 1) {
+          System.out.print("For " + square + ", the answer is " + test[0]);
+          System.out.print(". It took " + test[1] + " iterations. ");
+        } else if (style == 2) {
+          System.out.println("For " + square + ", the answer is " + test[0]);
+          System.out.println("It took " + test[1] + " iterations.");
+        }
+      }
+      // Asks user if they want to run the program again
+      System.out.println("\nCompute another? (y/n)");
+      // Instantiates a new Scanner
+      // This is ugly but I was having problems using the same variable in as above
+      Scanner newIn = new Scanner(System.in);
+      String newUserInput = newIn.next();
+      promptUser(newUserInput);
     } else if (input.equals("n")) {
       System.out.println("Goodbye!");
     } else {
+      // If input is not y or n I just ended the program
+      // Could also do a while loop until they enter y or n
       System.out.println("Error, shutting down.");
     }
   }
