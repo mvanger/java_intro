@@ -25,6 +25,10 @@ public class TestStuff
     //   System.out.println();
     // }
     System.out.println(pyramidVolume(5, 3));
+    // String somestuff = "3.95";
+    // System.out.println(Integer.parseInt(Double.parseDouble(somestuff)));
+    String somestuff2 = "string\nstuff";
+    System.out.println(somestuff2.length());
   }
 
   public static double pyramidVolume(double height, double baseLength)
