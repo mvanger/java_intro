@@ -32,7 +32,8 @@ public class FlightPlanner
     } else if (input.toLowerCase().equals("b")) {
       bMethod();
     } else if (input.toLowerCase().equals("q")) {
-      // Do nothing, terminate
+      // prints the statement below
+      System.out.println("Thank you, have a nice day!");
     } else {
       // Restarts this method
       System.out.println("Invalid input");
@@ -110,32 +111,88 @@ public class FlightPlanner
 
   public static void nMethod()
   {
-    // Method goes here
+        //declare 4 arrays to be populated with flight information
+    String[] nameArray = new String[100];
+    String[] departureArray = new String[100];
+    String[] destinationArray = new String[100];
+    String[] flightNoArray = new String[100];
+
+
+    int i = 0;
+    int j = 0;
+
+    //populate arrays with existing user reservations
+    while (userArray[i][0] != null)
+    {
+      nameArray[i] = userArray[i][0];
+      departureArray[i] = userArray[i][1];
+      destinationArray[i] = userArray[i][2];
+      flightNoArray[i] = userArray[i][3];
+      i++;
+    }
+
+    //user input for new reservation
     Scanner in = new Scanner(System.in);
     System.out.println("Enter the name: ");
-      String name = in.next();
+    String userName = in.nextLine();
     System.out.println("Enter the departure city: ");
-    String departure = in.next();
+    String userDeparture = in.nextLine();
     System.out.println("Enter the destination city: ");
-    String destination = in.next();
+    String userDestination = in.nextLine();
 
-    //add name to user array
-    // for(int i = )
-    //check origin, destination
-    //add flightID to array
+    nameArray[i] = userName;
+    departureArray[i] = userDeparture;
+    destinationArray[i] = userDestination;
+
+    //check and match from flight array to user array
+
+    //while (flightArray[j][0] != null)
+    //{
+    for(j = 0; j < 10; j++){
+      if (departureArray[i].equals(flightArray[j][0]) && destinationArray[i].equals(flightArray[j][1]))
+      {
+        //if (destinationArray[i].equals(flightArray[j][1]))
+        //{
+        flightNoArray[i] = flightArray[j][2];
+        //}
+      }
+    }
+    //}
+
+    System.out.print(Arrays.toString(flightNoArray));
+    //write the new reservations to the text file, save
+    //writeUserFile method here**
 
   }
 
-  public static void sMethod()
+  public static void sMethod() throws FileNotFoundException
   {
-    // Method goes here
+    // Prints out exisitng reservations
+    // Reads users file
+    String[][] outputArray = readUserFile();
+    //Loops through array and prints out every reservation in the array
+    for (int i = 0; i < 100; i++) {
+        for (int j = 0; j < 4; j++) {
+          if (outputArray[i][j] != null) {
+            System.out.print(outputArray[i][j]);
+          }
+       }
+       if (outputArray[i][0] != null) {
+         System.out.println();
+       }
+    }
+    // Prints if no reservations are found
+    if (outputArray[0][0] == null) {
+       System.out.println("No Reservations were found.");
+    }
+    promptUser();
   }
 
   public static void uMethod() throws FileNotFoundException
   {
     // Gets passenger name from user
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter the name of a passenger you would like to find reservations for:");
+    System.out.println("Enter the name of a passenger you would like to find reservations for: ");
     String passenger = in.nextLine();
     // Reads users file
     String[][] outputArray = readUserFile();
