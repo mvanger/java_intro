@@ -1,0 +1,10 @@
+Chicago; Boston; 21435;
+Boston; Chicago; 23514;
+New York; Boston; 23523;
+Charlotte; Los Angeles; 45342;
+Minneapolis; Miami; 45323;
+Miami; Boston; 34234;
+Pittsburgh; Columbus; 93243;
+Dallas; Lincoln; 45234;
+New Orleans; Buffalo; 42342;
+Atlanta; Phoenix; 99932;

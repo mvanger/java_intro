@@ -1,0 +1,10 @@
+Mike; Chicago; Boston; 21435;
+Mike; Boston; Chicago; 23514;
+Nicole; New York; Boston; 23523;
+Kathryn; Charlotte; Los Angeles; 45342;
+Nicole; Minneapolis; Miami; 45323;
+Mike; Miami; Boston; 34234;
+Kathryn; Pittsburgh; Columbus; 93243;
+Nicole; Dallas; Lincoln; 45234;
+Mike; New Orleans; Buffalo; 42342;
+Kathryn; Chicago; Boston; 21435;

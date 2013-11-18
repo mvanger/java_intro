@@ -29,6 +29,12 @@ public class HelloPrinter // Declares the class HelloPrinter
     }
     System.out.println(total);
     System.out.println(Arrays.toString(values));
+    String somestring = "here is a string";
+    String someotherstring = somestring;
+    System.out.println(someotherstring);
+    someotherstring = someotherstring + "concatenated";
+    System.out.println(somestring);
+    System.out.println(someotherstring);
   }
 }
 
