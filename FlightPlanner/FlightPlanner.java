@@ -5,7 +5,9 @@ Group:
     Michael Vanger
     Nina (Kathryn?) Wolf
 Purpose: This program interfaces with two files to keep track of flight bookings.
-General Design: Four options exist for asking the user for input. They can make a new booking, see all bookings, see the bookings for a specific passenger, or the bookings for a specific flight. There also exist methods to read and write from and to the relevant files. The prompt user method wraps these other methods.
+General Design: Four options exist for asking the user for input. They can make a new booking, see all bookings,
+see the bookings for a specific passenger, or the bookings for a specific flight. There also exist methods to read and write from and to the relevant files.
+The prompt user method wraps these other methods.
 */
 
 import java.io.File;
@@ -161,7 +163,7 @@ public class FlightPlanner
 
   /**
     Creates new reservations
-    @params flightArray an array with origin city, destination city and flight#, userArray an array with passenger name, origin city, destination city and flight#
+    @params flightArray an array with origin city, destination city and flight#, userArray an array with passenger name, origin city, destination city, and flight#
     @return none
   */
   public static void nMethod(String[][] flightArray, String[][] userArray) throws FileNotFoundException
