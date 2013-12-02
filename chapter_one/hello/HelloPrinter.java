@@ -35,6 +35,13 @@ public class HelloPrinter // Declares the class HelloPrinter
     someotherstring = someotherstring + "concatenated";
     System.out.println(somestring);
     System.out.println(someotherstring);
+    // So you can actually have arrays that contain objects of different classes
+    Object[] anArray = {"String", 1, 1.5};
+    System.out.println(Arrays.toString(anArray));
+    Flight airplane = new Flight("Boston", "Chicago", "12345");
+    System.out.println(airplane.getOrigin());
+    System.out.println(airplane.getDestination());
+    System.out.println(airplane.getFlightNumber());
   }
 }
 
