@@ -1,5 +1,5 @@
 /**
-MSIA 490 JAVA PROJECT 3
+MSIA 490 JAVA PROJECT 4
 Group:
     Nicole Lim
     Michael Vanger
@@ -7,7 +7,8 @@ Group:
 Purpose: This program interfaces with two files to keep track of flight bookings.
 General Design: Four options exist for asking the user for input. They can make a new booking, see all bookings,
 see the bookings for a specific passenger, or the bookings for a specific flight. There also exist methods to read and write from and to the relevant files.
-The prompt user method wraps these other methods.
+The prompt user method wraps these other methods. Passengers are instances of the Passenger class, and Flights are
+instances of the Flight class.
 */
 
 import java.io.File;
@@ -15,7 +16,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class FlightPlanner
 {
@@ -45,7 +45,6 @@ public class FlightPlanner
     if (input.toLowerCase().equals("n")) {
       ArrayList<Flight> flights = readFlightFile();
       ArrayList<Passenger> users = readUserFile();
-      System.out.println(users);
       nMethod(flights, users);
     } else if (input.toLowerCase().equals("s")) {
       sMethod();
@@ -67,7 +66,7 @@ public class FlightPlanner
   /**
     Reads in the input file of flight information
     @params none
-    @return An array with origin city, destination city, and flight#
+    @return an array of Flights
   */
   public static ArrayList<Flight> readFlightFile() throws FileNotFoundException
   {
@@ -75,11 +74,8 @@ public class FlightPlanner
     File inputFile = new File("allFlights.txt");
     Scanner secondIn = new Scanner(inputFile);
 
-    //New flight array created
-    // String[][] flightArray = new String[100][3];
+    // New flight array created
     ArrayList<Flight> flightArray = new ArrayList<Flight>();
-
-    int i = 0;
 
     while (secondIn.hasNextLine())
     {
@@ -98,10 +94,7 @@ public class FlightPlanner
 
       Flight plane = new Flight(origin, destination, flightID);
       flightArray.add(plane);
-      // flightArray[i][0] = origin;
-      // flightArray[i][1] = destination;
-      // flightArray[i][2] = flightID;
-      i++;
+
       lineScanner.close();
     }
     return flightArray;
@@ -110,7 +103,7 @@ public class FlightPlanner
   /**
     Reads the file that contains passenger/flight information
     @params none
-    @return an array of with passenger name, origin city, destination city, and flight#
+    @return an array of Passengers
   */
   public static ArrayList<Passenger> readUserFile() throws FileNotFoundException
   {
@@ -118,7 +111,6 @@ public class FlightPlanner
     File inputFile = new File("reservations.txt");
     Scanner thirdIn = new Scanner(inputFile);
     ArrayList<Passenger> userArray = new ArrayList<Passenger>();
-    int i = 0;
 
     while (thirdIn.hasNextLine())
     {
@@ -135,87 +127,62 @@ public class FlightPlanner
       destination = destination.trim();
       flightID = flightID.trim();
 
-      // if (userArray.size() > 0) {
-      //   for (Passenger element : userArray) {
-      //     if (element.getFullName().equals(name)) {
-      //       Flight flight = new Flight(origin, destination, flightID);
-      //       element.addFlight(flight);
-      //     }
-      //   }
-      // } else {
+      boolean found = false;
+
+      // If passenger exists, adds the flight
+      // Otherwise instantiates passenger with flight
+      if (userArray.size() > 0) {
+        for (Passenger element : userArray) {
+          if (element.getFullName().equals(name)) {
+            Flight flight = new Flight(origin, destination, flightID);
+            element.addFlight(flight);
+            found = true;
+          }
+        }
+        if (!found) {
+          Flight flight = new Flight(origin, destination, flightID);
+          Passenger newRider = new Passenger(name, flight);
+          userArray.add(newRider);
+        }
+      } else {
         Flight flight = new Flight(origin, destination, flightID);
         Passenger newRider = new Passenger(name, flight);
         userArray.add(newRider);
-      // }
+      }
 
-
-      // userArray[i][0] = name;
-      // userArray[i][1] = origin;
-      // userArray[i][2] = destination;
-      // userArray[i][3] = flightID;
-      i++;
       lineScanner.close();
     }
     return userArray;
   }
 
   /**
-    Writes new reservations to a text file and saves
-    @param outputArray an array with passenger name, origin city, destination city, and flight#
+    Writes new reservations to a text file and saves it
+    @param outputArray an array of Passengers
     @return none
     */
   public static void writeUserFile(ArrayList<Passenger> outputArray) throws FileNotFoundException
   {
-    int i = 0;
     PrintWriter out = new PrintWriter("reservations.txt");
-    // while (outputArray.get(i) != null)
-    // {
-    //   for (int j = 0; j < outputArray.get(i).getFlightDetails().size(); j++)
-    //   {
-    //     out.printf("%s; ", outputArray.get(i).getFlightDetails().get(j));
-    //   }
-    // out.println();
-    // i++;
-    // }
-
+    // loops through array of passengers
     for (Passenger element : outputArray) {
+      // writes each flight for each passenger
       for (int j = 0; j < element.getFlightDetails().size(); j++)
       {
         out.printf("%s", element.getFlightDetails().get(j));
+        out.println();
       }
-    out.println();
     }
-
     out.close();
   }
 
   /**
     Creates new reservations
-    @params flightArray an array with origin city, destination city and flight#, userArray an array with passenger name, origin city, destination city, and flight#
+    @params flightArray an array of Flights, userArray an array of Passengers
     @return none
   */
   public static void nMethod(ArrayList<Flight> flightArray, ArrayList<Passenger> userArray) throws FileNotFoundException
   {
-    // Declares 4 arrays for reservation information
-    // String[] nameArray = new String[100];
-    // String[] departureArray = new String[100];
-    // String[] destinationArray = new String[100];
-    // String[] flightNoArray = new String[100];
-
-    int i = 0;
-    int j = 0;
-    int k = 0;
     int check = 0;
-
-    // Populates arrays with existing user reservations
-    // while (userArray.get(i) != null)
-    // {
-    //   nameArray[i] = userArray[i][0];
-    //   departureArray[i] = userArray[i][1];
-    //   destinationArray[i] = userArray[i][2];
-    //   flightNoArray[i] = userArray[i][3];
-    //   i++;
-    // }
 
     //Receives user input for a new reservation
     Scanner fourthIn = new Scanner(System.in);
@@ -227,26 +194,11 @@ public class FlightPlanner
     String userDestination = fourthIn.nextLine();
     String flightNo = null;
     Flight newFlight = null;
-    // nameArray[i] = userName;
-    // departureArray[i] = userDeparture;
-    // destinationArray[i] = userDestination;
-
 
     //Checks and matches a flight number to the reservation
-    // while (flightArray.get(j) != null)
-    // {
-    //   if (userDeparture.equals(flightArray.get(j).getOrigin()) && userDeparture.equals(flightArray.get(j).getDestination()))
-    //   {
-    //     flightNo = flightArray.get(j).getFlightNumber();
-    //     newFlight = new Flight(userDeparture, userDestination, flightNo);
-    //     check = 1;
-    //   }
-    //   j++;
-    // }
-
     for (Flight element : flightArray) {
       if (userDeparture.equals(element.getOrigin()) && userDestination.equals(element.getDestination())) {
-        flightNo = flightArray.get(j).getFlightNumber();
+        flightNo = element.getFlightNumber();
         newFlight = new Flight(userDeparture, userDestination, flightNo);
         check = 1;
       }
@@ -264,7 +216,6 @@ public class FlightPlanner
     {
       Passenger newRider = new Passenger(userName, newFlight);
       newOutputArray.add(newRider);
-      k++;
     }
 
     // Checks existing combinations
@@ -298,21 +249,14 @@ public class FlightPlanner
     System.out.println("All flights and passengers:");
     //Loops through array and prints out every reservation in the array
     for (Passenger element : outputArray) {
-      System.out.print(element.getFullName() + " ");
-      System.out.print(element.getFlights().get(0).getOrigin() + " ");
-      System.out.print(element.getFlights().get(0).getDestination() + " ");
-      System.out.print(element.getFlights().get(0).getFlightNumber() + "\n");
+      for (Flight value : element.getFlights()) {
+        System.out.print(element.getFullName() + "; ");
+        System.out.print(value.getOrigin() + "; ");
+        System.out.print(value.getDestination() + "; ");
+        System.out.print(value.getFlightNumber() + "\n");
+      }
     }
-    // for (int i = 0; i < 100; i++) {
-    //   for (int j = 0; j < 4; j++) {
-    //     if (outputArray[i][j] != null) {
-    //       System.out.printf("%s; ", outputArray[i][j]);
-    //     }
-    //   }
-    //   if (outputArray[i][0] != null) {
-    //     System.out.printf("\n");
-    //   }
-    // }
+
     // Prints if no reservations are found
     if (outputArray.size() == 0) {
       System.out.println("No reservations were found.");
@@ -338,23 +282,19 @@ public class FlightPlanner
     ArrayList<Passenger> outputArray = readUserFile();
     // Declares an integer to check if user exists
     int check = 0;
-    System.out.println("Flights:");
     // Loops through array to check for user
     for (Passenger element : outputArray) {
       // If passenger is found, prints relevant info
       if (passengerName.equals(element.getFullName()))
       {
+        System.out.println("Flights:");
         for (String value : element.getFlightDetails()) {
           System.out.println(value);
         }
-        // for (int j = 0; j < 4; j++)
-        // {
-        //   System.out.printf("%s; ", outputArray[i][j]);
-        // }
-        System.out.println();
         check++;
       }
     }
+
     // Prints if passenger not found
     if (check == 0)
     {
@@ -393,24 +333,14 @@ public class FlightPlanner
     System.out.println("Passengers:");
     // Loops through array to check for flight
     for (Passenger element : outputArray) {
-      if (flightNumber.equals(element.getFlights().get(0).getFlightNumber())) {
-        System.out.print(element.getFullName());
-        System.out.println();
-        check++;
+      for (Flight value : element.getFlights()) {
+        if (flightNumber.equals(value.getFlightNumber())) {
+          System.out.print(element.getFullName());
+          System.out.println();
+          check++;
+        }
       }
     }
-    // for (int i = 0; i < 100; i++) {
-    //   // If flight is found, prints passenger info
-    //   if (flightNumber.equals(outputArray[i][3])) {
-    //     // for (int j = 0; j < 4; j++) {
-    //     // Prints passenger name only
-    //     //// Should it print O-D and Flight # too?
-    //     System.out.print(outputArray[i][0]);
-    //     // }
-    //     System.out.println();
-    //     check++;
-    //   }
-    // }
 
     // Prints if flight/passenger not found
     if (check == 0) {

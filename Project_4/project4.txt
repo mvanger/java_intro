@@ -1,0 +1,16 @@
+Group Members:
+Mike Vanger
+Nicole Lim
+Nina Kathryn Wolf
+
+Assumptions:
+We believe that a user name can be presented in many forms.  They could only have a first name (for example, Cher) or have a prefix or suffix to their name, for example Dr. John Doe or Robert Griffin III.  A name could also include character symbols such as Da'Quan Bowers, Jr. Technically, a legal name may include any character.  Therefore these names are acceptable in our program.
+
+The two files are called "allFlights.txt" and "reservations.txt", and are assumed to reside in the same folder as the source code.
+
+Exceptions:
+1. We have thrown a FileNotFoundException.  This exception is thrown in each method in case the there is a problem with the input or output file.
+
+2. Another exception is the improper entry format in the flight #’s. To correct this exception, we have checked that our variable "FlightNumber" matches a 5 digit integer number. If not, an error message will appear.
+
+3. Another exception is attempting to enter existing (user, flight) combination. To correct this exception, we have checked to make sure the (user,flight) combination does not already exist. If it does, an error message stating that it already exists will appear.

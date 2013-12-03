@@ -1,6 +1,5 @@
-/************  FLIGHT CLASS ***********/
-  /*
-  Contain the flight information (origin city, destination city and flight number) or various flight plans.
+/**
+A Flight, with origin, destination, and flight number
 */
 public class Flight{
   private String origin;
@@ -16,6 +15,10 @@ public class Flight{
     this.flightNumber = "";
   }
 
+  /**
+  Constructs a flight with inputs of origin, destination, and flightID
+  @params originCity the origin, destinationCity the destination, flightID the flight ID number
+  */
   public Flight(String originCity, String destinationCity, String flightID) {
     this.origin = originCity;
     this.destination = destinationCity;
@@ -24,6 +27,7 @@ public class Flight{
 
   /**
   Sets the origin city.
+  @param departureCity the origin
   */
   public void setOrigin(String departureCity){
     this.origin = departureCity;
@@ -31,6 +35,7 @@ public class Flight{
 
   /**
   Sets the destination city.
+  @param arrivalCity the destination
   */
   public void setDestination(String arrivalCity){
     this.destination = arrivalCity;
@@ -38,6 +43,7 @@ public class Flight{
 
   /**
   Sets the flight number.
+  @param flightID the flight ID number
   */
   public void setFlightNumber(String flightID){
     this.flightNumber = flightID;
@@ -48,7 +54,7 @@ public class Flight{
   @return the origin city
   */
   public String getOrigin() {
-    return origin;
+    return this.origin;
   }
 
   /**
@@ -56,7 +62,7 @@ public class Flight{
   @return the destination city
   */
   public String getDestination() {
-    return destination;
+    return this.destination;
   }
 
   /**
@@ -64,6 +70,6 @@ public class Flight{
   @return the flight number
   */
   public String getFlightNumber() {
-    return flightNumber;
+    return this.flightNumber;
   }
 }

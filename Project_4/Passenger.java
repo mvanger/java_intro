@@ -1,67 +1,45 @@
-/**************PASSENGER CLASS*****************/
 import java.util.ArrayList;
 
+/**
+A Passenger, with a name and an array of flights
+*/
 public class Passenger {
-
-  String fullName;
-  ArrayList<Flight> flights;
-  // String origin;
-  // String destination;
-  // String flightNumber;
-  ArrayList<String> flightReservations;
+  private String fullName;
+  private ArrayList<Flight> flights;
+  private ArrayList<String> flightReservations;
 
   /**
-  Constructs passenger instance variables
+  Constructs passenger instance
   */
-  public Passenger () {
-    fullName = "";
-    flights = new ArrayList<Flight>();
-    // origin = "";
-    // destination = "";
-    // flightNumber = "";
-    flightReservations = new ArrayList<String>();
+  public Passenger() {
+    this.fullName = "";
+    this.flights = new ArrayList<Flight>();
+    this.flightReservations = new ArrayList<String>();
   }
 
-  public Passenger (String name, Flight flight) {
+  /**
+  Constructs passenger instance
+  @params name the passenger name, flight the first flight he/she is booked on
+  */
+  public Passenger(String name, Flight flight) {
     this.fullName = name;
-    // this.origin = origin;
-    // this.destination = destination;
-    // this.flightNumber = flightNumber;
     this.flights = new ArrayList<Flight>();
     this.flights.add(flight);
-    flightReservations = new ArrayList<String>();
+    this.flightReservations = new ArrayList<String>();
     setFlightDetails();
   }
 
-
   /**
   Generates full name from first and last name input
+  @param name the passenger's name
   */
-  public void setFullName (String name){
-    fullName = name;
-    // return fullName;
+  public void setFullName(String name){
+    this.fullName = name;
   }
-
-  // public void setOrigin (String departure){
-  //   origin = departure;
-  // }
-
-  /**
-  Sets the destination city.
-  */
-  // public void setDestination (String arrival){
-  //   destination = arrival;
-  // }
-
-  /**
-  Sets the flight number.
-  */
-  // public void setFlightNumber (String flightID){
-  //   flightNumber = flightID;
-  // }
 
   /**
   Adds a flight
+  @param flight the flight to be added
   */
   public void addFlight(Flight flight) {
     this.flights.add(flight);
@@ -73,40 +51,31 @@ public class Passenger {
   @return the passenger name
   */
   public String getFullName() {
-    return fullName;
+    return this.fullName;
   }
 
   /**
-  Gets the origin city.
-  @return the origin city
+  Gets the flights the passenger is booked on
+  @return an array of all flights the passenger is booked on
   */
-  // public String getOrigin() {
-  //   return origin;
-  // }
-
-  /**
-  Gets the destination city.
-  @return the destination city
-  */
-  // public String getDestination() {
-  //   return destination;
-  // }
-
-  // public String getFlightNumber() {
-  //   return flightNumber;
-  // }
-
   public ArrayList<Flight> getFlights() {
     return this.flights;
   }
 
+  /**
+  Sets the flight details as a semicolon delimited line
+  */
   public void setFlightDetails(){
     for (Flight element : this.flights) {
       this.flightReservations.add(fullName + "; " + element.getOrigin() + "; " + element.getDestination() + "; " + element.getFlightNumber() + ";");
     }
   }
 
+  /**
+  Gets the flight details
+  @return an array of flight details
+  */
   public ArrayList<String> getFlightDetails(){
-    return flightReservations;
+    return this.flightReservations;
   }
 }
