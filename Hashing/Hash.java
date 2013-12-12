@@ -9,24 +9,26 @@ import java.io.PrintWriter;
 public class Hash {
 
   public static void main(String[] args) throws FileNotFoundException {
-    ArrayList<ArrayList<String>> first = new ArrayList<ArrayList<String>>();
-    for (int i = 0; i < 30; i++) {
-      first.add(new ArrayList<String>());
-      // first.get(i).add("a string");
-    }
-    // first.add(new ArrayList<String>());
-    // for (ArrayList<String> y : first) {
-      // System.out.println(y.get(0));
+    // ArrayList<ArrayList<String>> first = new ArrayList<ArrayList<String>>();
+    // for (int i = 0; i < 30; i++) {
+    //   first.add(new ArrayList<String>());
+    //   // first.get(i).add("a string");
     // }
-    ArrayList<String> thing = readInputFile();
-    for (String z : thing) {
-      // System.out.println(z);
-      int size = z.length();
-      first.get(size).add(z);
-    }
-    for (ArrayList<String> stuff : first) {
-      System.out.println(stuff);
-    }
+    // // first.add(new ArrayList<String>());
+    // // for (ArrayList<String> y : first) {
+    //   // System.out.println(y.get(0));
+    // // }
+    // ArrayList<String> thing = readInputFile();
+    // for (String z : thing) {
+    //   // System.out.println(z);
+    //   int size = z.length();
+    //   first.get(size).add(z);
+    // }
+    // for (ArrayList<String> stuff : first) {
+    //   System.out.println(stuff);
+    // }
+    String test = "100";
+    System.out.println(test.matches("100"));
   }
 
   public static ArrayList<String> readInputFile() throws FileNotFoundException

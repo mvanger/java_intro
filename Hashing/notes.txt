@@ -1,0 +1,12 @@
+Group members: Nicole Lim, Michael Vanger, Kathryn Wolf
+
+Some assumptions/things:
+  We assumed that the keys go from 0-99 (or 0-199) rather than 1-100
+  We assumed that each word should get written even if it is already there (ie we allowed duplicates)
+    This is easy to change if you want no duplicates
+  We allowed for extra characters in a word (ie , . [ ] " ")
+    So "and" is different from "and,"
+
+Some exceptions:
+  We have thrown a FileNotFoundException.  This exception is thrown in each method in case the there is a problem with the input or output file.
+
