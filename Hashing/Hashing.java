@@ -88,11 +88,12 @@ public class Hashing
     //Create an Array of each word in the input file
     ArrayList<String> inputArray = new ArrayList<String>();
 
-    while (secondIn.hasNextLine())
+    while (secondIn.hasNext())
     {
-      //Scans the docuement and reads a word at a time
+      //Scans the document and reads a word at a time
       String word = secondIn.next();
-      Scanner wordScanner = new Scanner(word);
+      secondIn.useDelimiter("[^A-Za-z0-9]+");
+     // Scanner wordScanner = new Scanner(word);
 
       //removes the white space
       // wordScanner = wordScanner.trim();
@@ -100,7 +101,7 @@ public class Hashing
       //add each word to an arraylist
       inputArray.add(word);
 
-      wordScanner.close();
+     // wordScanner.close();
     }
 
     return inputArray;
@@ -118,6 +119,8 @@ public class Hashing
     for (int i = 0; i < input.length(); i++) {
       char c = input.charAt(i);
       int ascii = (int) c;
+	  if (ascii == 34 || ascii == 46 || ascii == 44 || ascii == 59 || ascii == 40 || ascii == 41 || ascii == 45 || ascii == 39)
+	        { ascii = 0; }
       sum = sum + ascii;
     }
 

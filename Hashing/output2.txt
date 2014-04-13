@@ -1,100 +1,100 @@
-0, ancestors, bear, relation, ancestors, ancestors, bear, relation, ancestors, enough, laid, School
-1, the, the, the, the, the, the, de, the, the, the, the, the, the, the, the, the, de, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, avoid, the, the, the, the, the, the, the, the, the, the, the, the, celebrated, the
-2, Shakespeare, Sakspere,Shagspere,, Shakespeare, Shakespeare, Shakespeare, Sakspere,Shagspere,, Shakespeare, Shakespeare, ETH)., mathematics, mathematics, friendship, mathematics
+0, ancestors, ancestors, bear, relation, ancestors, ancestors, ancestors, ancestors, bear, relation, ancestors, ancestors, enough, laid, 22, School
+1, the, the, the, the, the, the, de, the, the, the, the, the, the, the, the, the, de, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, the, 23, the, the, the, the, the, Wintelers, the, avoid, the, the, the, the, the, the, the, the, the, the, the, the, celebrated, the
+2, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, Shakespeare, mathematics, mathematics, mathematics, friendship, interest, mathematics
 3, subsequent
-4 EMPTY LINE...
+4, corporation, corporation
 5 EMPTY LINE...
-6 EMPTY LINE...
+6, field, however, Olsberg
 7, name, name, to, to, name, name, name, to, name, to, name, name, to, to, name, name, name, to, name, to, to, to, to, to, to, to, to, to, Maja, to, to, next
-8, Shakspere,, poems, Shakspere,, poems, Matura
-9, different, wielding, different, wielding, Switzerland, future
-10, However,, However,, However,, However,, post.
-11, age, approval,
-12, ways, century, contain, ways, century, contain, citizenship, Polytechnic.
+8, poems, poems, Matura
+9, different, wielding, different, wielding, 1916, Switzerland, Switzerland, future
+10, However, However, However, However, 1917
+11, age
+12, ways, signature, century, contain, ways, signature, century, contain, Albert, father, citizenship
 13, derivation, derivation, standard, issue
-14, his, his, his, apparently, his, his, his, apparently, his, his, realized,, his, published, his, Technische, Polytechnic,, Aarau,, his, his, his, years,, his
-15, beginning, molecules., structure
-16, later, mathematical
-17, an, 166, surname, than, than, an, 166, surname, than, than, Switzerland,, an
-18, families, families, examinations, poor
-19, longer, classical, led, led, moved, romance,, extra-curricular
-20, 1896,, 1896,, Mileva, been
-21, Folio., no, towns, Folio., no, towns, no, but, but, examination, component,, functions.There, but, no
-22, Shakkespere,, as, as, originally, Shakkespere,, as, as, originally, collaborated
-23, dedications, that, dedications, that, that, special, that, 1916,, at, September, at, at, that, that, that
-24, light., interest.
-25, Shakespere,, Book, formal, more, Shakespere,, Book, formal, more, Newtonian, he, examination,[22], he, attended, he, he, he
+14, his, his, his, apparently, his, his, his, apparently, his, his, realized, his, published, his, Technische, his, his, his, his
+15, s, s, s, s, beginning, structure, s, s, s, s
+16, later, daughter, later, mathematical
+17, an, 166, surname, than, than, an, 166, surname, than, than, an
+18, widespread, Shakkespere, families, widespread, Shakkespere, families, examinations, poor
+19, longer, classical, led, led, moved
+20, Mileva, been
+21, no, towns, no, towns, no, examination, but, 96, but, examination, but, no
+22, as, as, originally, as, as, originally, collaborated
+23, dedications, that, dedications, that, that, special, that, at, September, at, at, that, that, that
+24, There
+25, Book, formal, Folio, more, Book, formal, Folio, more, Newtonian, he, he, attended, he, he, he, contributions
 26, historians
-27, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, Einstein, and, and, and, Einstein, Einstein, and, Kingdom, and, and, year,, and, Einstein, and, and, Einstein, Einstein, Einstein
+27, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, and, Einstein, and, and, and, Einstein, Einstein, and, Kingdom, and, and, and, Einstein, and, Einstein, and, and, Einstein, Einstein, Einstein
 28, developed
-29, forms., forms., theory,, model, top
-30, even, their, identity, even, their, identity, Polytechnic, Polytechnic, Polytechnic
+29, model, top
+30, even, their, identity, even, their, identity, career, Polytechnic, Polytechnic, Polytechnic, Polytechnic, Polytechnic
 31, applied
-32, spelt, variety, sixteenth, spelt, variety, sixteenth, Over
+32, spelt, variety, himself, sixteenth, spelt, variety, himself, sixteenth, Paul, Over
 33, Chacsper, Chacsper, He, He, He, He, physics, Aargau, physics, physics, physics, physics, physics
 34, with, with, with, particle, Cantonal, with, with, with, with, with, with
 35, continued
-36, himself,, himself,, obtained, advice, passed
-37, fields,, made, contributions.
-38, appears, appears, appears, true, martial, appears, appears, appears, true, martial, however,, sat, exceptional, 1-6, Olsberg,, diploma,, substantive
-39, be, John, mystery., notices, be, John, mystery., notices, be, universe.
-40, nomme, nomme, sister, Maric,, among, have, have, she
-41, wrote, keep, wrote, keep, which, thermal, which, Federal, service., which
-42, ancestors., ancestors., ancestors., ancestors., read
-43, of, of, of, of, of, of, of, of, of, far, of, villages., of, of, of, of, of, of, of, of, of, far, of, villages., of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, Professor, of, Württemberg, of, of, of, of, of
-44, elsewhere., elsewhere., father's, program
-45, While
-46, light, together
-47, relativity, relativity
-48, principle, general, general, general, Wintelers', Winteler, awarded, any
-49, The, possible, The, The, possible, possible, The, possible, The, The, possible, possible, laws, laws, mathematics.[23]
+36, Shagspere, speare, Shagspere, speare, obtained, advice, passed
+37, made
+38, Sakspere, appears, appears, appears, true, martial, Sakspere, appears, appears, appears, true, martial, sat, exceptional, schooling, substantive
+39, be, John, notices, be, John, notices, be, approval
+40, Shakspere, Shakspere, nomme, Shakspere, Shakspere, nomme, sister, among, have, have, she
+41, wrote, keep, wrote, keep, which, thermal, which, Federal, which
+42, Shake, Shake, read
+43, of, of, of, of, of, of, of, of, of, far, of, of, of, of, of, of, of, of, of, of, far, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, of, large, of, of, of, of, of, of, Professor, of, of, of, of, of, of
+44, sixteen, program, post
+45, While, subjects, papers
+46, light, light, together
+47, villages, villages, relativity, relativity, relativity, relativity
+48, principle, general, general, Eidgen, general, Winteler, Winteler, Winteler, extra, awarded, any
+49, The, possible, The, The, possible, possible, The, possible, The, The, possible, possible, laws, laws, 1, course
 50, via, via
-51, on, on, on, investigated, on, wife,, on, on
-52, signature,, signature,, grades,, they, Maric, Maric
+51, on, on, on, investigated, on, on, on
+52, Maric, they, Maric, Maric
 53, section, claims
-54, Shakespeare,, twenty-four, Shakespeare,, twenty-four, 1917,, Eidgenössische, 6, Marie
+54, elsewhere, elsewhere, Marie, 6, 6, Marie
 55, or, or, grade, grade
-56, can, Shakespeare., can, Shakespeare., paper, (later
+56, can, can, paper
 57, Swiss, Swiss
 58, This, love
 59, extremely, by, extremely, throughout, extremely, by, extremely, throughout, part, On
 60, First, First
-61, occurs, occurs, though
-62, widespread,, Shakespeare's, Shakespeare's, widespread,, Shakespeare's, Shakespeare's, reconcile, same, books
-63, astonishing, plays, astonishing, plays
-64, electromagnetic, field., problems, family
-65, in, in, in, in, Interestingly,, in, in, in, in, in, in, in, in, in, in, Interestingly,, in, in, in, in, in, in, development, could, in, in, in, in, in, in, in, in, in, in, in, in, in
-66, details, details, gravitation, son, January, diploma, woman, diploma
-67, Shakeshafte, seen, many, Shakeshafte, seen, many, increasing
-68, credited, documents, credited, documents, sixteen,, Winteler's
-69, always, generally, less, always, generally, less, properties, foundation, Marics
-70, is, is, is, is, is, is
+61, occurs, occurs, though, seventeen
+62, reconcile, same, books
+63, astonishing, plays, twenty, astonishing, plays, twenty
+64, electromagnetic, problems, family
+65, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, in, development, could, in, molecules, in, in, in, in, in, in, in, in, in, in, in, in
+66, details, details, gravitation, son, January, diploma, woman, diploma, diploma
+67, Shakeshafte, seen, many, Interestingly, Shakeshafte, seen, many, Interestingly, universe, increasing
+68, credited, documents, credited, documents
+69, always, generally, less, always, generally, less, properties, foundation, service, Marics
+70, is, is, is, is, is, is, Aarau
 71, it, pseudonyms, it, pseudonyms, renounced, military
-72, Shaxpere,, authors, Shaxpere,, authors, photon, schooling., Winteler,, (Albert's, married, few, into
-73, 16, another, In, wanted, held, 16, another, In, wanted, held, In, In, In, In
-74, hyphen, plumes, hyphen, plumes, career,, explanations
-75, including, including, quantum, reach, including, teaching, teaching, teaching, teaching
-76, deal, grades, Marie., 1900,, studied
-77, England, England, gravitational, for, Paul.), for, 1905
+72, authors, authors, photon, married, few, into, 1900
+73, 16, another, In, wanted, held, 16, another, In, wanted, held, In, In, In, In, functions
+74, hyphen, plumes, hyphen, plumes, explanations, rttemberg
+75, including, including, quantum, reach, including, teaching, teaching, teaching, teaching, component
+76, deal, grades, grades, studied
+77, England, England, gravitational, for, for, 1905
 78, entrance, Hochschule
-79, Stratford, Stratford, theory, theory, theory, theory, theory, theory, theory, papers,
-80, corporation,, corporation,, Near, only, only
-81, examples, signatures, was, was, examples, signatures, was, was, was, relativity., relativity., and,, Einstein's, was, was
+79, Stratford, mystery, Stratford, mystery, theory, theory, theory, theory, theory, theory, theory, theory
+80, Near, only, only
+81, examples, signatures, was, was, examples, signatures, was, was, was, was, was
 82, one, one, German
 83, Council, Warwickshire, Warwickshire, archives, Council, Warwickshire, Warwickshire, archives, failed, failed, evidence
-84, students
-85, "Shake-speare", significance, "Shake-speare", significance, good
-86, times, times, Principal, Jost
-87, frequently, frequently, seventeen,, course.
-88, 1895–96, taking
-89, Shakstaff,, spear, Shakstaff,, spear, 1895,, subjects,
-90, found, found, scale, six
-91, take, take, mechanics, mechanics, also, mechanics, also, complete, also
-92, era, era, large-scale, secondary, lodging, daughter,
-93, used, used, enrolled, enrolled
-94, who, who, motion, who
-95 EMPTY LINE...
-96, printed, printed, mostly, four-year
-97, “Shakspere.”, a, a, a, a, a, common, “Shakspere.”, a, a, a, a, a, common, a, Zurich, required, a, a, Zurich, a, Zurich, a, find
-98 EMPTY LINE...
+84, students, curricular
+85, significance, significance, ETH, good
+86, times, times, ssische, Principal, Jost
+87, frequently, frequently, W, romance
+88, taking
+89, Shakstaff, spear, Shakstaff, spear
+90, found, found, scale, scale, six
+91, Shakespere, take, forms, Shakespere, take, forms, mechanics, mechanics, also, mechanics, also, complete, also
+92, Shaxpere, era, Shaxpere, era, secondary, lodging
+93, used, used, enrolled, year, enrolled, year
+94, who, four, who, four, motion, four, who
+95, fields, 1895, 1895
+96, printed, printed, 1896, 1896, mostly
+97, a, a, a, a, a, common, a, a, a, a, a, common, a, Zurich, required, a, a, Zurich, a, wife, Zurich, a, find
+98, years
 99, thought, extended, statistical, fell
